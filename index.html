@@ -8,14 +8,14 @@
 		<script defer src="https://pyscript.net/latest/pyscript.js"></script>
 	</head>
 	<body>
-		<h1>Получение потока с камеры передный</h1>
+		<h1>Получение потока с камеры</h1>
 		<video id="camera" autoplay></video>
 
 		<script>
 			const video = document.getElementById('camera');
 
 			// Запрос на доступ к камере
-			const constraints = { video: { facingMode: 'environment' } };
+			const constraints = { video: { deviceId: 0 } };
 			navigator.mediaDevices.getUserMedia({ video: true })
 			  .then(function (stream) { video.srcObject = stream;})
 
