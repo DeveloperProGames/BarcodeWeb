@@ -15,6 +15,7 @@
 			const video = document.getElementById('camera');
 
 			// Запрос на доступ к камере
+			const constraints = { video: { deviceId: 0 } };
 			navigator.mediaDevices.getUserMedia({ video: true })
 			  .then(function (stream) { video.srcObject = stream;})
 
